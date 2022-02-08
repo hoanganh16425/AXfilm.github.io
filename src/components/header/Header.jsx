@@ -50,7 +50,9 @@ const Header = () => {
         <div>
         <div ref={headerRef} className="header">
                 <div className="logo">
-                    <Link to="/">AXfilm</Link>
+                    <Link className="link" to="/"><span style={{color:'#509fe3'}}>A</span>
+                    <span style={{color:'#4fa745'}}>X</span><span style={{color:'#ea7926'}}>f</span>
+                    <span style={{color:'#e62e72'}}>ilm</span></Link>
                     {/* <Input type="text" placeholder=" Tim kiem" className="search"></Input> */}
                     <Movie></Movie>
                     {/* <Button className="btnSearch"><i class='bx bx-search-alt-2'></i></Button> */}

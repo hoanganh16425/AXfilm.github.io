@@ -6,6 +6,10 @@
   align-items: center;
   display: flex;
 }
+.link {
+  text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff,
+    1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
 .movie-search {
   display: flex;
 }
@@ -42,7 +46,7 @@
   left: 0;
   width: 100%;
   z-index: 99;
-  background-color: black;
+  background-color: #1c1c1c;
   display: flex;
   justify-content: space-between;
   align-items: center;

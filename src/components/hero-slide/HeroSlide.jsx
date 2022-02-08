@@ -89,7 +89,7 @@ const HeroSlideItem = props => {
             <div className="hero-slide__item__content container">
                 <div className="hero-slide__item__content__info">
                     <h2 className="title">{item.title}</h2>
-                    <div className="overview">{item.overview}</div>
+                    {/* <div className="overview">{item.overview}</div> */}
                     <div className="btns">
                         <Button className="btn" onClick={() => hisrory.push('/movie/' + item.id)}>
                             Watch now 
