@@ -23,11 +23,15 @@
   display: flex;
   padding: 0 5rem;
   width: 100%;
+  @include mobile {
+    display: none;
+  }
   &__nav {
     display: flex;
     justify-content: flex-start;
     color: black;
     font-size: 13px;
+
     & > * ~ * {
       margin-left: 1.5rem;
     }
@@ -55,8 +59,31 @@
   &__nav {
     display: flex;
     justify-content: space-between;
+    @include mobile {
+      display: none;
+    }
     & > * ~ * {
       margin-left: 2rem;
     }
   }
+  .menumobile {
+    display: none;
+    @include mobile {
+      display: block;
+      font-size: 30px;
+    }
+  }
+  .menu {
+    display: none;
+    color: black;
+    background-color: white;
+    transform: translateX(-75px);
+    line-height: 2.5;
+    width: 100px;
+    text-align: end;
+    padding-right: 7px;
+    margin-top: 5px;
+  }
+}
+@include tablet {
 }

@@ -8,6 +8,7 @@ import MovieList from '../components/movie-list/MovieList';
 import { category, movieType, tvType } from '../api/tmdbApi';
 
 const Home = () => {
+    
     return (
         <>
             <HeroSlide/>

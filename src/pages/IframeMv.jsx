@@ -36,7 +36,6 @@ const IframeMv = () => {
                         <div className="container">
                             <div className="section  mb-3">
                                 <iframe allowFullScreen="fullscreen" className="section__media" src={url} title="play"></iframe>
-                                <img style={{height:"350px",marginLeft:"40px"}} src={mynhan}></img>
                             </div>
                             <div className="section mb-3">
                                 <div className="section__header mb-2">

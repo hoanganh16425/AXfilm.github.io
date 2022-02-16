@@ -43,9 +43,23 @@ const Header = () => {
 
     const { pathname } = useLocation();
     const headerRef = useRef(null);
-
+    const [menuiconmobile,setmenuiconmobile] = useState("none")
+    const [width,setwidth] = useState(0)
     const active = headerNav.findIndex(e => e.path === pathname);
-
+    function handleChangeMobile() {
+        if(width < 700){
+            setmenuiconmobile(menuiconmobile === "none" ? "block" : "none")
+        }else{
+            setmenuiconmobile("none")
+        }
+    }
+    function setw(){
+        setwidth(window.innerWidth)
+        if(width>700){
+            setmenuiconmobile("none")
+        }
+    }
+   window.addEventListener("resize",setw)
     return (
         <div>
         <div ref={headerRef} className="header">
@@ -57,7 +71,20 @@ const Header = () => {
                     <Movie></Movie>
                     {/* <Button className="btnSearch"><i class='bx bx-search-alt-2'></i></Button> */}
                 </div>
-               
+                <div>
+                    <i class='bx bx-menu menuIcon menumobile' onClick={handleChangeMobile}></i>
+                    <ul style={{display:menuiconmobile,position:"absolute"}} className="menu">
+                    {
+                        headerNav.map((e, i) => (
+                            <li key={i} className={`${i === active ? 'active' : ''}`}>
+                                <Link to={e.path}>
+                                    {e.display}
+                                </Link>
+                            </li>
+                        ))
+                    }
+                </ul>
+                </div>
                 <ul className="header__nav">
                     {
                         headerNav.map((e, i) => (
@@ -69,6 +96,7 @@ const Header = () => {
                         ))
                     }
                 </ul>
+                
             </div>
             <div  className="category">
                 <i class='bx bx-menu menuIcon'></i>
@@ -83,6 +111,7 @@ const Header = () => {
                             ))
                         }
                     </ul> 
+                    
             </div>
             </div>
     );

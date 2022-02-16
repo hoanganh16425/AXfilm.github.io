@@ -1,4 +1,4 @@
-@use "../../scss/variables" as *;
+@use "../../scss/" as *;
 
 .inputA {
   border: 0;
@@ -17,4 +17,7 @@
   border-top-left-radius: 5px;
   width: 400px;
   border: none;
+  @include tablet {
+    width: 241px;
+  }
 }

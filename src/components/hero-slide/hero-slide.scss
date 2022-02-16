@@ -3,12 +3,23 @@
 .hero-slide {
   margin-bottom: 3rem;
   padding-top: 75px;
+  @include mobile {
+    padding-top: 0px;
+  }
 }
 .imgSlide {
   // height: 100%;
   width: 100%;
   overflow: hidden;
-  transform: translateY(-200px);
+  transform: translateY(-147px);
+  @include tablet {
+    min-height: 462px;
+    min-width: 985px;
+  }
+  @include tablet {
+    height: 400px;
+    min-width: 555px;
+  }
 }
 .hero-slide__item {
   width: 100%;
@@ -24,13 +35,15 @@
     top: 0;
     width: 100%;
     height: 100%;
+    @include tablet {
+      justify-content: flex-start;
+    }
 
     &__info {
       max-width: 55%;
       padding: 0 3rem;
       position: relative;
       padding-bottom: 2rem;
-      background-color: rgba(0, 0, 0, 0.3);
       @include tablet {
         width: 100%;
       }
